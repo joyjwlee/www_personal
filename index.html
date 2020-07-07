@@ -1,112 +1,436 @@
 <!DOCTYPE HTML>
-<!--
-	Identity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
 
 <head>
-	<title>JAEWON LEE</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <!--=============== Init  ===============-->
+    <meta charset="UTF-8">
+    <title> Jaewon Lee </title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--=============== CSS  ===============-->
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/plugins.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/color.css">
+    <!--=============== Favicon ===============-->
+    <link rel="shortcut icon" href="images/favicon.ico">
 </head>
 
-<body class="is-preload">
+<body>
+    <!--loader-->
+    <div class="loader-wrap">
+        <div class="pin"></div>
+    </div>
+    <!--loader end-->
+    <!-- Main  -->
+    <div id="main">
+        <!-- header-->
+        <header class="main-header">
+            <a class="logo-holder" href="index.html">
+                <img src="images/logo.png" alt="">
+            </a>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+            <div class="header-social">
+                <ul>
+                    <li><a href="http://linkedin.com/in/joyjwlee" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li><a href="https://github.com/joyjwlee" target="_blank"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/channel/UCq-hazDDgW7Ij4cKW0rawsw?view_as=subscriber"
+                            target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/joyjwlee" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </li>
 
-		<!-- Main -->
-		<section id="main">
-			<header>
-				<h1><a>&lt/&gt</a></h1>
-				<span class="avatar"><img src="images/scan.jpg" alt="" style="width:200px;height:200px;" /></span>
-				<h1><a>Jaewon Lee</a></h1>
-				<p><a>Your above-average student with strong interests in just about anything STEM-related.</a></p>
-			</header>
+                </ul>
+            </div>
 
-			<!--extras-->
+        </header>
+        <!--  header end -->
 
-			<header>
-				<ul class="icons">
-					<li><a href="https://github.com/joyjwlee" target="_blank" class="icon brands fa-github">GitHub</a>
-					</li>
-					<li><a href="https://www.youtube.com/channel/UCq-hazDDgW7Ij4cKW0rawsw" target="_blank"
-							class="icon brands fa-youtube">YouTube</a></li>
-					<li><a href="https://www.facebook.com/joyjwlee" target="_blank"
-							class="icon brands fa-facebook-f">Facebook</a></li>
-					<li><a href="http://instagram.com/jaewon._.lee" target="_blank"
-							class="icon brands fa-instagram">Instagram</a></li>
-				</ul>
-			</header>
+        <!-- wrapper-->
+        <div id="wrapper">
+            <!-- scroll-nav-wrap-->
+            <div class="scroll-nav-wrap fl-wrap">
+                <div class="scroll-down-wrap">
+                    <div class="mousey">
+                        <div class="scroller"></div>
+                    </div>
+                    <span>Scroll Down</span>
+                </div>
+                <nav class="scroll-nav scroll-init">
+                    <ul>
 
-			<footer>
-				<p><a href="https://hai.stanford.edu/research/intelligence">Stanford AI
-						Lab</a><br /><br /><a href="http://jaewon.ml/" style="font-size:7px">This is a
-						temporary site</a></p>
-				<h1><a>&lt/&gt</a></h1>
-			</footer>
-		</section>
+                        <li><a class="scroll-link" href="#sec5">Tech Portfolio</a></li>
+                        <li><a class="scroll-link" href="#sec6">Music Portfolio</a></li>
+                        <li><a class="scroll-link" href="#sec7">Effective Altruism</a></li>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<ul class="copyright">
-				<li><a>&copy; 2020 Jaewon Lee, HTML5 UP. All Rights Reserved.</a></li>
-			</ul>
-		</footer>
+                    </ul>
+                </nav>
+            </div>
+            <!-- scroll-nav-wrap end-->
+            <!-- hero-wrap-->
+            <div class="hero-wrap" id="sec1" data-scrollax-parent="true">
+                <!-- hero-inner-->
+                <!-- fullscreen-slider-wrap-->
+                <div class="slider-carousel-wrap full-height fullscreen-slider-wrap">
+                    <div class="fullscreen-slider full-height cur_carousel-slider-container fl-wrap"
+                        data-slick='{"autoplay": true, "autoplaySpeed": 4000 , "pauseOnHover": false}'>
+                        <!-- fullscreen-slider-item-->
+                        <div class="fullscreen-slider-item full-height fl-wrap">
+                            <div class="bg par-elem" data-bg="images/bg/1.jpg"></div>
+                            <div class="overlay"></div>
+                            <div class="half-hero-wrap">
+                                <h1><span>Jaewon Lee.</span><br>17-year-old<br><span>machine learning researcher.
+                                    </span></h1>
 
-	</div>
+                                <h4>Unlocking the future</h4>
 
-	<!-- Scripts -->
-	<script>
-		if ('addEventListener' in window) {
-			window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
-			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-		}
-	</script>
+                                <div class="clearfix"></div>
+                                <a href="#sec5" class="custom-scroll-link btn float-btn flat-btn color-btn mar-top">My
+                                    portfolio</a>
+                            </div>
+                        </div>
+                        <!-- fullscreen-slider-item end-->
+                        <!-- fullscreen-slider-item-->
+                        <div class="fullscreen-slider-item full-height fl-wrap">
+                            <div class="bg par-elem" data-bg="images/bg/2.jpg"></div>
+                            <div class="overlay"></div>
+                            <div class="half-hero-wrap">
+                                <h1><span>Jaewon Lee.</span><br>17-year-old<br> <span>composer and arranger.</span></h1>
+                                <h4>Originals and covers</h4>
+                                <div class="clearfix"></div>
 
+                                <a href="#sec6"
+                                    class="custom-scroll-link btn float-btn flat-btn color-btn mar-top">Watch my
+                                    presentation</a>
+                            </div>
+                        </div>
+                        <!-- fullscreen-slider-item end-->
+                        <!-- fullscreen-slider-item-->
+                        <div class="fullscreen-slider-item full-height fl-wrap">
+                            <div class="half-hero-wrap">
+                                <h1><span>Jaewon Lee.</span><br>17-year-old<br><span>effective altruist.</span></h1>
+                                <h4>The most good you can do</h4>
+
+                                <div class="clearfix"></div>
+
+                                <a href="#sec7"
+                                    class="custom-scroll-link btn float-btn flat-btn color-btn mar-top">Watch my
+                                    interview</a>
+                            </div>
+                            <div class="bg par-elem" data-bg="images/bg/3.jpg"></div>
+                            <div class="overlay"></div>
+                        </div>
+                        <!-- fullscreen-slider-item end-->
+                    </div>
+                    <div class="sp-cont   sp-cont-prev"><i class="fal fa-arrow-left"></i></div>
+                    <div class="sp-cont   sp-cont-next"><i class="fal fa-arrow-right"></i></div>
+                    <div class="fullscreenslider-counter"></div>
+                </div>
+                <!-- fullscreen-slider-wrap end-->
+
+            </div>
+            <!-- hero-wrap end-->
+            <!-- Content-->
+            <div class="content">
+                <!--section -->
+                <section class="dark-bg" id="sec5">
+                    <!-- section-title -->
+                    <div class="section-title fl-wrap">
+
+                        <h2>My Tech<span> Portfolio</span></h2>
+
+                    </div>
+                    <div class="fet_pr-carousel-title">
+                        <div class="fet_pr-carousel-title-item">
+                            <h3><br><br><br>Projects</h3>
+                            <p> 1. Item One <br> 2. Item Two <br> 3.Item Three </p>
+                        </div>
+                    </div>
+                    <!--slider-carousel-wrap -->
+                    <div class="slider-carousel-wrap fl-wrap">
+                        <!--fet_pr-carousel -->
+                        <div class="fet_pr-carousel cur_carousel-slider-container fl-wrap">
+                            <!--slick-item -->
+                            <div class="slick-item">
+                                <div class="fet_pr-carousel-box">
+                                    <div class="fet_pr-carousel-box-media fl-wrap">
+                                        <img src="images/folio/web/slider/cpu.jpg" class="respimg" alt="">
+                                    </div>
+                                    <div class="fet_pr-carousel-box-text fl-wrap">
+                                        <h3><a href="https://www.google.com/" target="_blank">Name of Thing</a></h3>
+
+                                        <div class="fet_pr-carousel-cat"><a href="https://www.google.com/"
+                                                target="_blank">Link 1</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 2</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 3</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--slick-item end -->
+
+                            <!--slick-item -->
+                            <div class="slick-item">
+                                <div class="fet_pr-carousel-box">
+                                    <div class="fet_pr-carousel-box-media fl-wrap">
+                                        <img src="images/folio/web/slider/cpu.jpg" class="respimg" alt="">
+                                    </div>
+                                    <div class="fet_pr-carousel-box-text fl-wrap">
+                                        <h3><a href="https://www.google.com/" target="_blank">Name of Thing</a></h3>
+
+                                        <div class="fet_pr-carousel-cat"><a href="https://www.google.com/"
+                                                target="_blank">Link 1</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 2</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 3</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--slick-item end -->
+
+                            <!--slick-item -->
+                            <div class="slick-item">
+                                <div class="fet_pr-carousel-box">
+                                    <div class="fet_pr-carousel-box-media fl-wrap">
+                                        <img src="images/folio/web/slider/cpu.jpg" class="respimg" alt="">
+                                    </div>
+                                    <div class="fet_pr-carousel-box-text fl-wrap">
+                                        <h3><a href="https://www.google.com/" target="_blank">Name of Thing</a></h3>
+
+                                        <div class="fet_pr-carousel-cat"><a href="https://www.google.com/"
+                                                target="_blank">Link 1</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 2</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 3</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--slick-item end -->
+
+                            <!--slick-item -->
+                            <div class="slick-item">
+                                <div class="fet_pr-carousel-box">
+                                    <div class="fet_pr-carousel-box-media fl-wrap">
+                                        <img src="images/folio/web/slider/cpu.jpg" class="respimg" alt="">
+                                    </div>
+                                    <div class="fet_pr-carousel-box-text fl-wrap">
+                                        <h3><a href="https://www.google.com/" target="_blank">Name of Thing</a></h3>
+
+                                        <div class="fet_pr-carousel-cat"><a href="https://www.google.com/"
+                                                target="_blank">Link 1</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 2</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 3</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--slick-item end -->
+
+                            <!--slick-item -->
+                            <div class="slick-item">
+                                <div class="fet_pr-carousel-box">
+                                    <div class="fet_pr-carousel-box-media fl-wrap">
+                                        <img src="images/folio/web/slider/cpu.jpg" class="respimg" alt="">
+                                    </div>
+                                    <div class="fet_pr-carousel-box-text fl-wrap">
+                                        <h3><a href="https://www.google.com/" target="_blank">Name of Thing</a></h3>
+
+                                        <div class="fet_pr-carousel-cat"><a href="https://www.google.com/"
+                                                target="_blank">Link 1</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 2</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 3</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--slick-item end -->
+                        </div>
+                        <!--fet_pr-carousel end -->
+                        <div class="sp-cont sp-arr sp-cont-prev"><i class="fal fa-long-arrow-left"></i></div>
+                        <div class="sp-cont sp-arr sp-cont-next"><i class="fal fa-long-arrow-right"></i></div>
+                    </div>
+                    <!--slider-carousel-wrap end-->
+                    <div class="fet_pr-carousel-counter"></div>
+                </section>
+                <!-- section end -->
+
+                <!--section -->
+                <section class="dark-bg" id="sec6">
+                    <!-- section-title -->
+                    <div class="section-title fl-wrap">
+
+                        <h2>My Music<span> Portfolio</span></h2>
+
+                    </div>
+                    <div class="fet_pr-carousel-title">
+                        <div class="fet_pr-carousel-title-item">
+                            <h3><br><br><br>Compositions</h3>
+                            <p> 1. Item One <br> 2. Item Two <br> 3.Item Three </p>
+                        </div>
+                    </div>
+                    <!--slider-carousel-wrap -->
+                    <div class="slider-carousel-wrap fl-wrap">
+                        <!--fet_pr-carousel -->
+                        <div class="fet_pr-carousel cur_carousel-slider-container fl-wrap">
+                            <!--slick-item -->
+                            <div class="slick-item">
+                                <div class="fet_pr-carousel-box">
+                                    <div class="fet_pr-carousel-box-media fl-wrap">
+                                        <img src="images/folio/web/slider/music.jpg" class="respimg" alt="">
+                                    </div>
+                                    <div class="fet_pr-carousel-box-text fl-wrap">
+                                        <h3><a href="https://www.google.com/" target="_blank">Name of Thing</a></h3>
+
+                                        <div class="fet_pr-carousel-cat"><a href="https://www.google.com/"
+                                                target="_blank">Link 1</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 2</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 3</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--slick-item end -->
+
+                            <!--slick-item -->
+                            <div class="slick-item">
+                                <div class="fet_pr-carousel-box">
+                                    <div class="fet_pr-carousel-box-media fl-wrap">
+                                        <img src="images/folio/web/slider/music.jpg" class="respimg" alt="">
+                                    </div>
+                                    <div class="fet_pr-carousel-box-text fl-wrap">
+                                        <h3><a href="https://www.google.com/" target="_blank">Name of Thing</a></h3>
+
+                                        <div class="fet_pr-carousel-cat"><a href="https://www.google.com/"
+                                                target="_blank">Link 1</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 2</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 3</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--slick-item end -->
+
+                            <!--slick-item -->
+                            <div class="slick-item">
+                                <div class="fet_pr-carousel-box">
+                                    <div class="fet_pr-carousel-box-media fl-wrap">
+                                        <img src="images/folio/web/slider/music.jpg" class="respimg" alt="">
+                                    </div>
+                                    <div class="fet_pr-carousel-box-text fl-wrap">
+                                        <h3><a href="https://www.google.com/" target="_blank">Name of Thing</a></h3>
+
+                                        <div class="fet_pr-carousel-cat"><a href="https://www.google.com/"
+                                                target="_blank">Link 1</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 2</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 3</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--slick-item end -->
+
+                            <!--slick-item -->
+                            <div class="slick-item">
+                                <div class="fet_pr-carousel-box">
+                                    <div class="fet_pr-carousel-box-media fl-wrap">
+                                        <img src="images/folio/web/slider/music.jpg" class="respimg" alt="">
+                                    </div>
+                                    <div class="fet_pr-carousel-box-text fl-wrap">
+                                        <h3><a href="https://www.google.com/" target="_blank">Name of Thing</a></h3>
+
+                                        <div class="fet_pr-carousel-cat"><a href="https://www.google.com/"
+                                                target="_blank">Link 1</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 2</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 3</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--slick-item end -->
+
+                            <!--slick-item -->
+                            <div class="slick-item">
+                                <div class="fet_pr-carousel-box">
+                                    <div class="fet_pr-carousel-box-media fl-wrap">
+                                        <img src="images/folio/web/slider/music.jpg" class="respimg" alt="">
+                                    </div>
+                                    <div class="fet_pr-carousel-box-text fl-wrap">
+                                        <h3><a href="https://www.google.com/" target="_blank">Name of Thing</a></h3>
+
+                                        <div class="fet_pr-carousel-cat"><a href="https://www.google.com/"
+                                                target="_blank">Link 1</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 2</a> <a href="https://www.google.com/"
+                                                target="_blank">Link 3</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--slick-item end -->
+                        </div>
+                        <!--fet_pr-carousel end -->
+                        <div class="sp-cont sp-arr sp-cont-prev"><i class="fal fa-long-arrow-left"></i></div>
+                        <div class="sp-cont sp-arr sp-cont-next"><i class="fal fa-long-arrow-right"></i></div>
+                    </div>
+                    <!--slider-carousel-wrap end-->
+                    <div class="fet_pr-carousel-counter"></div>
+                </section>
+                <!-- section end -->
+
+                <!-- section  -->
+                <section class="dark-bg sinsec-dec sinsec-dec2" id="sec7">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="video-box fl-wrap">
+                                    <img src="images/all/thumbnail.jpg" class="respimg" alt="">
+                                    <a class="video-box-btn color-bg "
+                                        href="https://www.youtube.com/watch?v=CrMIEz_mSJM" target="_blank"><i
+                                            class="fal fa-play" aria-hidden="true"></i></a>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="video-promo-text fl-wrap mar-top">
+                                    <h3>The Precipice by by Toby Ord</h3>
+                                    <p>More details later to come; video courtesy of Centre for Effective Altruism</p>
+                                    <a href="https://web.stanford.edu/group/ea/" target="_blank"
+                                        class="btn float-btn flat-btn color-btn mar-top">EA @ Stanford</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="half-bg-dec single-half-bg-dec" data-ran="12"></div>
+                    <div class="sec-lines"></div>
+                </section>
+
+
+                <!-- section-->
+                <section class="dark-bg2 small-padding order-wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h3>Jaewon Lee</h3>
+                            </div>
+                            <div class="col-md-4"><a href="mailto:joyjwlee@gmail.com" class="btn flat-btn color-btn">Get
+                                    In Touch</a> </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- section end-->
+            </div>
+            <!-- Content end -->
+
+            <!-- share-wrapper -->
+            <div class="share-wrapper isShare">
+                <div class="share-title"><span>Share</span></div>
+                <div class="close-share soa"><span>Close</span><i class="fal fa-times"></i></div>
+                <div class="share-inner soa">
+                    <div class="share-container"></div>
+                </div>
+            </div>
+            <!-- share-wrapper end -->
+        </div>
+        <!-- Main end -->
+        <!--=============== scripts  ===============-->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 
-</html>
+<!-- Mirrored from www.gracelynshi.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jul 2020 01:32:41 GMT -->
 
-<!--
-			<hr />
-			<h2>Extra Stuff!</h2>
-			<form method="post" action="#">
-				<div class="fields">
-					<div class="field">
-						<input type="text" name="name" id="name" placeholder="Name" />
-					</div>
-					<div class="field">
-						<input type="email" name="email" id="email" placeholder="Email" />
-					</div>
-					<div class="field">
-						<select name="department" id="department">
-							<option value="">Department</option>
-							<option value="sales">Sales</option>
-							<option value="tech">Tech Support</option>
-							<option value="null">/dev/null</option>
-						</select>
-					</div>
-					<div class="field">
-						<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-					</div>
-					<div class="field">
-						<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-					</div>
-					<div class="field">
-						<label>But are you a robot?</label>
-						<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-						<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
-					</div>
-				</div>
-				<ul class="actions special">
-					<li><a href="#" class="button">Get Started</a></li>
-				</ul>
-			</form>
-			<hr />
-			-->
+</html>
