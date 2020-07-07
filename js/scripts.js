@@ -198,7 +198,7 @@ function initSolonick() {
         slidesToShow: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-		pauseOnHover: false,
+        pauseOnHover: false,
         arrows: false,
         fade: true,
         cssEase: 'ease-in',
@@ -215,20 +215,20 @@ function initSolonick() {
         arrows: false,
         centerMode: false,
         responsive: [{
-                breakpoint: 1224,
-                settings: {
-                    slidesToShow: 2,
-                    centerMode: false,
-                }
-            },
-
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: true,
-                }
+            breakpoint: 1224,
+            settings: {
+                slidesToShow: 2,
+                centerMode: false,
             }
+        },
+
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                centerMode: true,
+            }
+        }
         ]
 
     });
@@ -250,20 +250,20 @@ function initSolonick() {
         arrows: false,
         centerMode: false,
         responsive: [{
-                breakpoint: 1224,
-                settings: {
-                    slidesToShow: 2,
-                    centerMode: false,
-                }
-            },
-
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: true,
-                }
+            breakpoint: 1224,
+            settings: {
+                slidesToShow: 2,
+                centerMode: false,
             }
+        },
+
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                centerMode: true,
+            }
+        }
         ]
 
     });
@@ -302,19 +302,19 @@ function initSolonick() {
         centerPadding: "0",
         centerMode: true,
         responsive: [{
-                breakpoint: 1224,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: true,
-                }
+            breakpoint: 1224,
+            settings: {
+                slidesToShow: 2,
             }
+        },
+
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                centerMode: true,
+            }
+        }
         ]
 
     });
@@ -331,28 +331,28 @@ function initSolonick() {
         centerPadding: "0",
         centerMode: true,
         responsive: [{
-                breakpoint: 1224,
-                settings: {
-                    slidesToShow: 4,
-                    centerMode: false,
-                }
-            },
-
-            {
-                breakpoint: 1084,
-                settings: {
-                    slidesToShow: 2,
-                    centerMode: true,
-                }
-            },
-
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: true,
-                }
+            breakpoint: 1224,
+            settings: {
+                slidesToShow: 4,
+                centerMode: false,
             }
+        },
+
+        {
+            breakpoint: 1084,
+            settings: {
+                slidesToShow: 2,
+                centerMode: true,
+            }
+        },
+
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                centerMode: true,
+            }
+        }
         ]
 
     });
@@ -765,7 +765,7 @@ function initSolonick() {
         $(this).parent(".blog-btn-filter").find("ul").slideToggle(500);
         return false;
     });
-    $('.hero-decor-let').rotaterator({fadeSpeed:500, pauseSpeed:1200});
+    $('.hero-decor-let').rotaterator({ fadeSpeed: 500, pauseSpeed: 1200 });
 }
 //   Parallax ------------------
 function initparallax() {
@@ -797,99 +797,99 @@ function initparallax() {
     }
     if (trueMobile) $(".bgvid , .background-vimeo , .background-youtube-wrapper ").remove();
 }
-    //   instagram ------------------	
-    var actoket = $('#insta-content').data("instatoken");
-    var token = actoket,
-        num_photos = 6;
-    $.ajax({
-        url: 'https://api.instagram.com/v1/users/self/media/recent',
-        dataType: 'jsonp',
-        type: 'GET',
-        data: {
-            access_token: token,
-            count: num_photos
-        },
-        success: function (data) {
-            for (x in data.data) {
-                $('#insta-content').append('<a target="_blank" href="' + data.data[x].link + '"><img src="' + data.data[x].images.low_resolution.url + '"></a>');
-            }
-        },
-        error: function (data) {
-            console.log(data);
+//   instagram ------------------	
+var actoket = $('#insta-content').data("instatoken");
+var token = actoket,
+    num_photos = 6;
+$.ajax({
+    url: 'https://api.instagram.com/v1/users/self/media/recent',
+    dataType: 'jsonp',
+    type: 'GET',
+    data: {
+        access_token: token,
+        count: num_photos
+    },
+    success: function (data) {
+        for (x in data.data) {
+            $('#insta-content').append('<a target="_blank" href="' + data.data[x].link + '"><img src="' + data.data[x].images.low_resolution.url + '"></a>');
         }
-    });
-    //   audio player ------------------
-    if ($(".audio-player-wrap").length > 0) {
-        function initAudiolist() {
-            audiojs.events.ready(function () {
-                var a = audiojs.createAll({
-                        trackEnded: function () {
-                            var next = $('.audio-player-wrap ol li.playing').next();
-                            if (!next.length) next = $('.audio-player-wrap ol li').first();
-                            next.addClass('playing').siblings().removeClass('playing');
-                            audio.load($('a.audio-link', next).attr('data-srcaudio'));
-                            audio.play();
-                        }
-                    }),
-                    audio = a[0],
-                    ids = ['vol-0', 'vol-40', 'vol-70', 'vol-100'];
-                for (var i = 0, ii = ids.length; i < ii; i++) {
-                    var elem = document.getElementById(ids[i]),
-                        volume = ids[i].split('-')[1];
-                    elem.setAttribute('data-volume', volume / 100)
-                    elem.onclick = function (e) {
-                        audio.setVolume(this.getAttribute('data-volume'));
-                        e.preventDefault();
-                        return false;
-                    }
-                }
-                var audio = a[0];
-                first = $('.audio-player-wrap ol a.audio-link').attr('data-srcaudio');
-                $('.audio-player-wrap ul li').first().addClass('playing');
-                audio.load(first);
-                $('.audio-player-wrap ol li a.audio-link').on("click", function (e) {
-                    e.preventDefault();
-                    if ($(this).parent("li").attr('class') === 'playing') {
-                        $(this).parent("li").addClass('pause');
-                        audio.playPause();
-                    } else {
-                        $(this).parent("li").removeClass('pause').addClass('playing').siblings().removeClass('playing').removeClass('pause');
-                        audio.load($(this).attr('data-srcaudio'));
-                        audio.play();
-                    }
-                });
-            });
-        }
-        initAudiolist();
-        $('.volume-control span').on('click', function () {
-            $('.volume-control span').removeClass("allvolumne");
-            var onStar = Number($(this).data('value'));
-            var stars = $(this).parent().children('span');
-            for (i = 0; i < stars.length; i++) {
-                $(stars[i]).removeClass('selected');
-            }
-            for (i = 0; i < onStar; i++) {
-                $(stars[i]).addClass('selected');
-            }
-            if ($(this).data("value") === 1) {
-                $(this).addClass('allvolumne');
-            }
-        });
-        var alblisttitle = $(".playlist-wrap ol").data("listalbumtitle");
-        $(".album-list-title").text("(" + alblisttitle + ")");
+    },
+    error: function (data) {
+        console.log(data);
     }
-    var audprev = $("#preview-sound");
-    $('.album-preview').on({
-        mouseenter: function () {
-            var audioprevpath = $(this).data("audiopath");
-            audprev.attr("src", audioprevpath);
-            audprev[0].play();
-        },
-        mouseleave: function () {
-            audprev[0].pause();
-            audprev[0].currentTime = 0;
+});
+//   audio player ------------------
+if ($(".audio-player-wrap").length > 0) {
+    function initAudiolist() {
+        audiojs.events.ready(function () {
+            var a = audiojs.createAll({
+                trackEnded: function () {
+                    var next = $('.audio-player-wrap ol li.playing').next();
+                    if (!next.length) next = $('.audio-player-wrap ol li').first();
+                    next.addClass('playing').siblings().removeClass('playing');
+                    audio.load($('a.audio-link', next).attr('data-srcaudio'));
+                    audio.play();
+                }
+            }),
+                audio = a[0],
+                ids = ['vol-0', 'vol-40', 'vol-70', 'vol-100'];
+            for (var i = 0, ii = ids.length; i < ii; i++) {
+                var elem = document.getElementById(ids[i]),
+                    volume = ids[i].split('-')[1];
+                elem.setAttribute('data-volume', volume / 100)
+                elem.onclick = function (e) {
+                    audio.setVolume(this.getAttribute('data-volume'));
+                    e.preventDefault();
+                    return false;
+                }
+            }
+            var audio = a[0];
+            first = $('.audio-player-wrap ol a.audio-link').attr('data-srcaudio');
+            $('.audio-player-wrap ul li').first().addClass('playing');
+            audio.load(first);
+            $('.audio-player-wrap ol li a.audio-link').on("click", function (e) {
+                e.preventDefault();
+                if ($(this).parent("li").attr('class') === 'playing') {
+                    $(this).parent("li").addClass('pause');
+                    audio.playPause();
+                } else {
+                    $(this).parent("li").removeClass('pause').addClass('playing').siblings().removeClass('playing').removeClass('pause');
+                    audio.load($(this).attr('data-srcaudio'));
+                    audio.play();
+                }
+            });
+        });
+    }
+    initAudiolist();
+    $('.volume-control span').on('click', function () {
+        $('.volume-control span').removeClass("allvolumne");
+        var onStar = Number($(this).data('value'));
+        var stars = $(this).parent().children('span');
+        for (i = 0; i < stars.length; i++) {
+            $(stars[i]).removeClass('selected');
+        }
+        for (i = 0; i < onStar; i++) {
+            $(stars[i]).addClass('selected');
+        }
+        if ($(this).data("value") === 1) {
+            $(this).addClass('allvolumne');
         }
     });
+    var alblisttitle = $(".playlist-wrap ol").data("listalbumtitle");
+    $(".album-list-title").text("(" + alblisttitle + ")");
+}
+var audprev = $("#preview-sound");
+$('.album-preview').on({
+    mouseenter: function () {
+        var audioprevpath = $(this).data("audiopath");
+        audprev.attr("src", audioprevpath);
+        audprev[0].play();
+    },
+    mouseleave: function () {
+        audprev[0].pause();
+        audprev[0].currentTime = 0;
+    }
+});
 //   Init All ------------------
 $(function () {
     initparallax();
